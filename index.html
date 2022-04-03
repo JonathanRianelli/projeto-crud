@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="src/styles/css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cadatro de Clientes</h1>
+    </header>
+    <main>
+        <div id="parte-superior">
+            <input type="button" value="Cadastrar Cliente" id="btn-cadastro">
+            <input type="search" name="buscar" placeholder="Buscar nome..." id="buscar" onkeyup="pesquisar()">
+        </div>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th class="esconder">E-mail</th>
+                    <th class="esconder">Telefone</th>
+                    <th class="esconder">Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <section class="modal">
+            <div id="conteudo-modal">
+                <h2>Cadastrar Cliente</h3>
+                    <form id="form">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" class="dados-modal" data-index="novo" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" class="dados-modal" required>
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="dados-modal" required>
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" class="dados-modal" required>
+                    </form>
+                    <div id="btns-modal">
+                        <input type="button" value="Cancelar" class="btn-modal" id="cancelar">
+                        <input type="button" value="Cadastrar" class="btn-modal" id="cadastrar">
+                    </div>
+            </div>
+        </section>
+        <section class="informacao">
+            <div id="conteudo-informacao">
+                <i class="fa-solid fa-xmark" id="fechar"></i>
+                <div id="client-info">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/a4b3fe64dc.js" crossorigin="anonymous"></script>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

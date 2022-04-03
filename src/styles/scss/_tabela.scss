@@ -1,0 +1,58 @@
+@use 'var' as *;
+
+table {
+    padding: 10px;
+    width: 90vw;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+tbody > tr:nth-child(2n-1) {
+    background-color: rgba(107, 110, 189, 0.14);
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: white;
+}
+
+th {
+    background-color: $azul;
+    color: white;
+    font-weight: normal;
+    border: 1px solid rgb(223, 223, 223);
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}
+
+td {
+    border: 1px solid rgba(124, 124, 124, 0.397);
+    padding: 3px 5px;
+}
+
+.acao {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        width: 28px;
+        height: 28px;
+        background-color: $azul;
+        margin: 0 3px;
+        padding: 7px;
+        cursor: pointer;
+        border-radius: 50%;
+        color: rgb(255, 255, 255);
+        font-size: .9em;
+
+        &:active{
+            background-color: darken($color: $azul, $amount: 8%);
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use 'var' as *;
+@use 'modal';
+
+.ver{
+    display: none;
+}
+
+.informacao {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.719);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &.ativo {
+        display: block;
+    }
+
+    #conteudo-informacao {
+        background-color: white;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-around;
+        width: 80vw;
+        height: 200px;
+        margin: 15vh auto;
+        padding: 40px 20px 5px;
+
+        i {
+            position: absolute;
+            color: white;
+            top: 0;
+            right: 0;
+            width: 24px;
+            float: right;
+            cursor: pointer;
+            text-align: center;
+            padding: 5px;
+            font-size: 1.5em;
+            background-color: $vermelho;
+
+            &:active {
+                background-color: darken($color: $vermelho, $amount: 8%);
+            }
+        }
+
+        p {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+            padding: 8px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .esconder {
+        display: none;
+    }
+    .ver, .informacao.ativo {
+        display: block;
+    }
+}
+
+@media (max-width: 520px) {
+    #buscar {
+        width: 150px;
+    }
+    #btn-cadastro {
+        padding: 8px;
+    }
+}

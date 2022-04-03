@@ -1,0 +1,30 @@
+@use 'var' as *;
+
+#parte-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 900px;
+    margin: 20px auto 30px;
+}
+
+#btn-cadastro {
+    background-color: $azul;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    &:active{
+        background-color: darken($color: $azul, $amount: 8%);
+    }
+}
+
+#buscar {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.507);
+    padding: 10px;
+    height: 30px;
+    width: 300px;
+}
