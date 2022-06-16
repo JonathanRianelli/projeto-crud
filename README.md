@@ -7,7 +7,7 @@
 <p>Projeto desenvolvido em HTML, SASS e Javascript, usando local storage para armazenar os clientes</p>
 
 
-## Linguagens Usadas
+## Tecnologias Usadas
 - ✔️ HTML
 - ✔️ SASS
 - ✔️ JavaScript
